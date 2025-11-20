@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="http://localhost:4000/about/">
+    <title>About – North Light Path</title>
+    <meta name="description" content="Sascha – pathways between creativity and business.">
+
+    <link rel="icon" href="https://northlightpath.com/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <!-- ---------- NAVBAR ---------- -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">NORTH LIGHT PATH</a>
+            <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/curiosity">Curiosity Assignments</a></li>
+                <li><a href="/paintings">Paintings</a></li>
+                <li><a href="/photography">Photography</a></li>
+                <li><a href="/poems">Poems</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="about-section">
+  <div class="about-container">
+    <h1 class="about-title">About Me</h1>
+
+    <div class="about-grid">
+      <div class="photo-card">
+        <img src="https://northlightpath.com/images/NPL.png" alt="Sascha - North Light Path" />
+      </div>
+
+      <div class="cards-column">
+        <div class="info-card">
+          <h2>Who I Am</h2>
+          <p>I'm a systems-minded creative with a background in business leadership, project operations, and team design. Over the past several years, I've led initiatives across technology, process, and people building teams, managing multimillion-dollar budgets, and shaping how collaboration and clarity take root in complex environments.</p>
+          <p>These days, I’m focused on contract work and completing my first poetry manuscript, <em>Weigh Station: Notes from the Quiet Years</em>—a collection tracing the quiet transformations between identity, belonging, and voice.</p>
+        </div>
+
+        <div class="info-card">
+          <h2>About This Site</h2>
+          <p>North Light Path is a living résumé—part portfolio, part experiment—written in HTML, CSS, JavaScript, and a little AI to keep curiosity alive. It’s a space where planning meets play, where systems and imagination coexist without the need for order.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--  3-latest-posts section  -->
+    <div class="info-card" style="margin-top:3rem">
+      <h2>Recent Notes</h2>
+      <div class="blog-preview">
+        
+          <article>
+            <h3><a href="/2025/11/19/first-note.html">First Note</a></h3>
+            <time>Nov 19, 2025</time>
+            <p>{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+</p>
+          </article>
+        
+        <p><a href="/blog">All notes →</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 North Light Path. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu(){
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-menu a').forEach(link=>
+            link.addEventListener('click',()=>
+                document.getElementById('navMenu').classList.remove('active')
+            )
+        );
+    </script>
+</body>
+</html>

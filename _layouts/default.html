@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <title>{{ page.title }} – North Light Path</title>
+    <meta name="description" content="{{ page.description }}">
+
+    <link rel="icon" href="https://northlightpath.com/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+    <!-- ---------- NAVBAR ---------- -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ '/' | relative_url }}" class="nav-logo">NORTH LIGHT PATH</a>
+            <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                <li><a href="{{ '/curiosity' | relative_url }}">Curiosity Assignments</a></li>
+                <li><a href="{{ '/paintings' | relative_url }}">Paintings</a></li>
+                <li><a href="{{ '/photography' | relative_url }}">Photography</a></li>
+                <li><a href="{{ '/poems' | relative_url }}">Poems</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {{ content }}
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 North Light Path. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu(){
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-menu a').forEach(link=>
+            link.addEventListener('click',()=>
+                document.getElementById('navMenu').classList.remove('active')
+            )
+        );
+    </script>
+</body>
+</html>
