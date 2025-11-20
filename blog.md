@@ -15,7 +15,7 @@ permalink: /blog/\
   <div class="about-container">\
     <h1 class="about-title">Notes</h1>\
 \
-    \{% for post in site.posts %\}\
+    {% for post in site.posts %}
       <div class="info-card">\
         <h2><a href="\{\{ post.url | relative_url \}\}">\{\{ post.title \}\}</a></h2>\
         <time>\{\{ post.date | date: "%b %d, %Y" \}\}</time>\
